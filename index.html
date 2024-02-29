@@ -1,52 +1,40 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 
-<html lang="es">   
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width">
-        <title>Challenge Encriptador</title>
-        <link rel="stylesheet" href="reset.css"> 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <h1><img src="img/Logo.png"></h1>
-            </div>
-            <div class="titulo">
-                <h2 class="titulo texto">Encriptador de Texto</h2>
-            </div>
-        </header>
-        <main>
-            <div class="seccion-texto">
-                <textarea  class="texto-encriptar" required placeholder="¡Ingrese el texto aqui!"></textarea>
-            </div>
-            <div class="botones">
-                <input type="button"  class="btn-encriptar" required="textarea" value="Encriptar">
-                <input type="button"  class="btn-desencriptar" value="Desencriptar">
-            </div>
-            <div class="alerta-copy">
-                <p><img src="img/alerta.png"> Solo letras minúsculas y sin acentos</p>
-            </div>
-            <div class="seccion-resultado">
-                <div class="parrafo">
-                    <h3 class="titulo-niguno">Ningún mensaje fue encontrado</h3>
-                    <p class="parrafo-niguno">Ingresa el texto que desees encriptar o desencriptar.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1></h1>
+                    <p class="texto__parrafo"></p>
                 </div>
-                <div class="resultado">
-                    <p class="texto-resultado"><p>
-                </div>
-                <div class="copiar">
-                    <input type="button" class="btn-copiar" value="Copiar">
-                </div>
-                <div class="personaje">
-                    <img src="img/Muñeco.png" class="robot">
+                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+                <div class="chute container__botones">
+                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
                 </div>
             </div>
-        </main> 
-        <script src="app.js"></script> 
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>             
-    </body>
+            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
 </html>
